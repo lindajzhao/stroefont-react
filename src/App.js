@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import DataService from './services/data';
 
 class App extends Component {
   render() {
@@ -19,6 +20,9 @@ class App extends Component {
           >
             Learn React
           </a>
+          <button
+            onClick={DataService.getData}
+          >Do a thing</button>
         </header>
       </div>
     );
