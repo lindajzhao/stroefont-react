@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import DataService from './services/data';
 import { PdpContainer } from './containers/PdpContainer'
 import { PlpContainer } from './containers/PlpContainer'
