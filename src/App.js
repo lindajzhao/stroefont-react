@@ -10,27 +10,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('INITIAL STATE', this.state)
-
     DataService.getData().then(({data}) => {
       this.setState({
         drugs: data
       })
-
-      console.log('component did mount. NEW STATE', this.state)
     });
   }
   
   handleClick = () => {
     DataService.getData().then(({data}) => {
-      console.log('handleClick', data)
-      // TODO: Figure out how to add new drugs to array
-      this.setState((prevState) => {
-        drugs: prevState.drugs.concat(data)
-      })
-      console.log('handleClick. NEW STATE', this.state)
+      this.setState((prevState) => ({ drugs: prevState.drugs.concat(data)}))
     });
-
   }
 
   render() {
